@@ -1,0 +1,18 @@
+<div class="select">
+    <select (change)="onChange($event)">
+        <option value="todos">Todas las categorias</option>
+        <option *ngFor="let post of posts" [value]="categoria">{{categoria}}</option>
+    </select>
+    </div>
+    
+<div class="posts">
+    <div class="post" *ngFor="let post of posts" [routerLink]="['/posts', post.id]">
+        <h3>{{ post.titulo}}</h3>
+        <img [src]="post.imagen" alt="">
+        <hr>
+        <p><strong>Fecha: </strong>{{post.fecha}}</p>
+        <p><strong>Autora: </strong>{{ post.autor }}</p>
+        <p><strong>Género: </strong>{{post.categoria}}</p>
+        <p>{{post.texto}}</p>
+    </div>
+</div>

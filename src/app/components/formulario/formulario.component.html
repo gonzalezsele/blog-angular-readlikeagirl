@@ -1,0 +1,26 @@
+<div>
+	<label>Nombre</label>
+	<input type="text" [(ngModel)]="nuevoPost.titulo">
+</div>
+
+<div>
+	<label>Apellidos</label>
+	<input type="text" [(ngModel)]="nuevoPost.texto">
+</div>
+
+<div>
+	<label>Email</label>
+	<input type="text" [(ngModel)]="nuevoPost.autor">
+</div>
+
+<div>
+	<label>Telefono</label>
+	<input type="text" [(ngModel)]="nuevoPost.fecha">
+</div>
+
+<div>
+	<label>Telefono</label>
+	<input type="text" [(ngModel)]="nuevoPost.categoria">
+</div>
+
+<button (click)="crearPost()">Enviar</button>
